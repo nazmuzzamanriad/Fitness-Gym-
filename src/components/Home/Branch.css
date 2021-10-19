@@ -1,0 +1,10 @@
+.branch{
+    display: flex;
+    justify-content: space-around;
+    background-color: black;
+    margin-bottom: 10px;
+    padding: 50px;
+}
+.branchForm{
+    
+}

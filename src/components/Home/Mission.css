@@ -1,0 +1,12 @@
+.mission{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    background-color: black;
+}.missionPara{
+    color: white;
+    border: 10px solid tomato;
+    padding: 50px;
+    margin: 50px;
+    text-align: justify;
+}
