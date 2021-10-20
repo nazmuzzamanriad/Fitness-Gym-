@@ -19,6 +19,7 @@ import AboutUs from './components/AboutUs/AboutUs';
 import Upcoming from './components/Upcoming/Upcoming';
 import Gallery from './components/Upcoming/Gallery/Gallery';
 import NotFound from './components/NotFound/NotFound';
+import ServiceDetails from './components/ServiceDetails/ServiceDetails';
 
 
 function App() {
@@ -52,6 +53,10 @@ function App() {
 
             <PrivateRoute path='/services'>
               <Services></Services>
+
+            </PrivateRoute>
+            <PrivateRoute path='/serviceDetails/:id'>
+              <ServiceDetails></ServiceDetails>
 
             </PrivateRoute>
             <PrivateRoute path='/aboutus'>
