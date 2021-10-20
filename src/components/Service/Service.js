@@ -8,7 +8,7 @@ const Service = (props) => {
     return (
         <div>
             <Col>
-                <Card>
+                <Card >
                     <Card.Img variant="top" src={image} />
                     <Card.Body className="card-body">
                         <Card.Title><h3>{name}</h3>

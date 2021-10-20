@@ -17,6 +17,7 @@ const useFirebase = () => {
     const [error, setError] = useState('');
     const [regError, setRegError] = useState('');
     const [displayName, setDisplayName] = useState('');
+    const [isLoading, setIsLoading] = useState(true);
 
 
 
@@ -84,6 +85,7 @@ const useFirebase = () => {
 
     // google sign in methos
     const googleLogin = () => {
+        setIsLoading(true);
 
         signInWithPopup(auth, googleProvider)
             .then((result) => {
@@ -94,6 +96,7 @@ const useFirebase = () => {
             }).catch(error => {
                 setError(error.message)
             })
+            .finally(() => setIsLoading(false));
 
 
     }
@@ -108,19 +111,23 @@ const useFirebase = () => {
 
     // user observer to hold the user when sign in and sign off a user
     useEffect(() => {
-        onAuthStateChanged(auth, user => {
+        const unsubscribed = onAuthStateChanged(auth, user => {
             if (user) {
-                setUser(user)
+                setUser(user);
             }
-        })
+            else {
+                setUser({})
+            }
+            setIsLoading(false);
+        });
+        return () => unsubscribed;
     }, [])
 
 
 
 
-
     return {
-        googleLogin, user, logOut, emailInput, passInput, registerButton, displayUserName, existingUser, error, regError
+        googleLogin, user, logOut, isLoading, emailInput, passInput, registerButton, displayUserName, existingUser, error, regError
     }
 
 
