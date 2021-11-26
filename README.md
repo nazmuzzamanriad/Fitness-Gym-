@@ -1,4 +1,4 @@
-# Title-FItness Gym Official website
+# Title-Fitness Gym Official website
 
 
 # Deatils about the website
