@@ -9,7 +9,7 @@
 5. Easily navigate using navbar also responsive for mobile devices
 
 # Github link
-https://github.com/Programming-Hero-Web-Course3/healthcare-related-website-nazmuzzamanriad
+https://github.com/nazmuzzamanriad/fitness-gym-
 
 
 
