@@ -1,4 +1,8 @@
 # Title-Fitness Gym Official website
+Main Features:
+•	Users can see the services
+•	Users have to login or sign up for ensure the fitness gym appointment information or membership
+
 
 
 # Deatils about the website
